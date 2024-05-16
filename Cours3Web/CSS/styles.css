@@ -1,0 +1,453 @@
+.site-header{
+    width: 90%;
+    height: 74px;
+    margin-top: 20px;
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    border-radius: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 5%;
+}
+
+.logo img{
+    width: 88px;
+    height: 74px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.logo img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.header-links{
+    width: 70%;
+    height: 25px;
+    mix-blend-mode: normal;
+    border-radius: 20px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-left: 15%;
+    margin-bottom: 35px;
+
+    color: rgb(39, 38, 38);
+    font-family: Arial, serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0px;
+    white-space: nowrap;
+}
+.header-links span {
+    margin-right: 10%;
+    padding: 20px 10px;
+    display: inline-block;
+    position: relative;
+}
+
+.header-links span:hover {
+    color: #FFFFFF; /* Изменение цвета текста на белый */
+    cursor: pointer; /* Изменение вида курсора */
+    transition: all 0.8s ease; /* Плавный переход */
+    box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 1); /* Создание эффекта закрашивания фона */
+    border-radius: 20px; /* Закругление краев */
+}
+
+.cart-icon{
+    width: 20px;
+    height: 15px;
+    mix-blend-mode: normal;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin-left: auto;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+.cart-icon img {
+    margin-right: 15px;
+}
+.cart-icon img:hover{
+    cursor: pointer;
+}
+
+
+.video-head {
+    margin-top: 40px;
+    height: 39px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    color: rgb(0, 0, 0);
+    font-family: Inter, serif;
+    font-size: 2.3vw;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.video-frame {
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    margin-top: 15px;
+}
+
+
+.top-head {
+    margin-top: 40px;
+    display: flex; /* Размещение дочерних элементов в ряд */
+    align-items: center; /* Выравнивание элементов по вертикали */
+    justify-content: space-between;
+}
+.top-content {
+    margin-left: 60px;
+    color: rgb(0, 0, 0);
+    font-family: Inter, serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 1px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.view-all-btn {
+    margin-right: 60px;
+    padding: 15px 30px;
+    color: rgb(0, 0, 0);
+    font-family: Inter, serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: center;
+
+    box-sizing: border-box;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0);
+    background: rgba(255, 255, 255, 0);
+}
+.view-all-btn:hover {
+    cursor: pointer;
+    color: #FFFFFF; /* Изменение цвета текста на белый */
+    background-color: #000000; /* Изменение цвета фона на черный */
+    transition: all 0.8s ease; /* Плавный переход */
+}
+
+
+.product-cards {
+    width: 91.5%;
+    height: 382px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px 0px 55px 0px;
+
+    margin-top: 40px;
+    margin-left: 60px;
+}
+
+.prod-card {
+    width: calc(20% - 15px);
+    display: flex;
+    flex-direction: column; /* Отображение элементов в столбец */
+    align-items: start; /* Выравнивание по центру по горизонтали */
+}
+
+.product-cards img{
+    width: 100%; /* Изменение ширины изображений на 100% относительно родителя */
+    height: auto;
+}
+.product-name{
+    color: rgb(0, 0, 0);
+    font-family: Arial, serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: left;
+    margin-top: 15px;
+}
+.product-price{
+    color: rgb(0, 0, 0);
+    font-family: Arial, serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+    margin-top: 10px;
+}
+.add-to-cart-btn{
+    border-radius: 6px;
+    width: 50%;
+    background: rgb(255, 255, 255);
+    color: rgb(0,0,0);
+    border: 1px solid rgb(0, 0, 0);
+    font-family: Inter, serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 17px;
+    text-align: center;
+    padding: 10px 10px;
+    margin-top: 10px;
+}
+.add-to-cart-btn:hover{
+    cursor: pointer;
+    color: #FFFFFF; /* Изменение цвета текста на белый */
+    background-color: #000000; /* Изменение цвета фона на черный */
+    transition: all 0.8s ease; /* Плавный переход */
+}
+
+
+.print-section{
+    /* PrintSection */
+    position: relative;
+    width: 84%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    background: rgb(240, 240, 240);
+    margin-left: 4%;
+}
+
+.print-content{
+    position: static;
+    width: 50%;
+    height: 500px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-top: auto; /* Добавлено для выравнивания по центру */
+    margin-left: 20px;
+    display: flex; /* Добавлено */
+    flex-direction: column; /* Добавлено */
+    justify-content: center; /* Добавлено */
+}
+
+.print-head{
+    width: 90%;
+    height: 69px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    color: rgb(0, 0, 0);
+    font-family: Inter, serif;
+    font-size: 1.85vw;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 1px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.print-details{
+    color: rgb(0, 0, 0);
+    font-family: Inter, serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.print-btn{
+    width: 52%;
+    box-sizing: border-box;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 20px;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0);
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: Inter, serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0;
+    text-align: center;
+    align-items: center;
+}
+.print-btn:hover{
+    border-color: black;
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    transition: all 0.8s ease;
+}
+
+.print-image{
+    /* BackForTheImage */
+    position: static;
+    width: 688px;
+    height: 500px;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 0px;
+
+    background: radial-gradient(50.00% 86.00% at 50% 50%,rgb(240, 240, 240),rgb(0, 0, 0) 27.5%,rgb(0, 0, 0) 73%,rgb(240, 240, 240) 100%);
+}
+
+.print-image img{
+    position: relative;
+    width: 330px;
+    height: 500px;
+    margin-left: 26%;
+}
+
+
+.section-film-cams{
+    position: relative;
+    width: 90%;
+    height: 600px;
+    margin-left: 5%;
+    margin-top: 60px;
+    align-items: center;
+}
+
+.section-film-cams-content{
+    color: rgb(0, 0, 0);
+    font-family: Inter, serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.section-film-cams-image img{
+    width: 100%;
+    height: 550px;
+    align-items: center;
+    object-fit: cover; /* Обрезать изображение, сохраняя пропорции */
+    transition: transform 0.3s ease;
+}
+.section-film-cams-image img:hover {
+    transform: scale(1.02); /* Увеличение размера изображения на 5% при наведении */
+    cursor: pointer;
+}
+
+
+.site-footer{
+    background: rgb(0, 0, 0);
+
+    color: #FFFFFF;
+    font-family: Inter, serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: left;
+
+    margin-top: 80px;
+    width: 101.2%;
+    margin-left: -9px;
+    margin-bottom: -10px;
+    height: 360px;
+}
+.footer-nav{
+    width: 90%;
+    height: 80%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px 0px 0px 32px;
+    margin-left: 1%;
+    margin-bottom: 30px;
+}
+.contact-info{
+    position: static;
+    width: 20%;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 32px;
+}
+.social-media-icons {
+    display: flex; /* Размещение иконок в ряд */
+    justify-content: flex-start; /* Расположение иконок слева */
+    align-items: center; /* Выравнивание иконок по вертикали */
+    margin-top: 45px; /* Отступ сверху */
+    height: 15px;
+    width: 50px;
+}
+
+.social-media-icons img {
+    transform: scale(0.2);
+    margin-top: 30px;
+    margin-right: -20px; /* Отступ между иконками */
+}
+.social-media-icons img:hover {
+    cursor: pointer;
+    transform: scale(0.25);
+}
+.first-icon{
+    margin-left: -40px;
+}
+
+.contact-info img{
+    width: 109px;
+    height: 93px;
+    margin-bottom: 24px;
+}
+.contact-info img:hover{
+    cursor: pointer;
+}
+.working-hours{
+    margin-bottom: 24px;
+}
+.phone-number{
+    margin-bottom: 24px;
+    text-decoration: none;
+}
+.address{
+    text-decoration: none;
+}
+.phone-number:hover,
+.address:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.nav-links,
+.product-categories,
+.services {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 5%;
+}
+
+.nav-links span,
+.product-categories span,
+.services span {
+    margin: 12px 0; /* Внутренние отступы между элементами */
+    text-decoration: none;
+}
+.nav-links span:hover,
+.product-categories span:hover,
+.services span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
