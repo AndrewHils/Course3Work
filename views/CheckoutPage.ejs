@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>36th Frame</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Arial&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/ContactsP.css">
+    <link rel="stylesheet" href="CSS/Checkout.css">
+</head>
+<body>
+<header class="site-header">
+    <div onclick="LinkToMainPage()" class="logo">
+        <img src="images/Title36.png" alt="36th Frame Logo">
+    </div>
+    <div class="header-links">
+        <span onclick="LinkToAnalogCams()" class="analog-cam-link">Аналогові камери</span>
+        <span onclick="LinkToShop()" class="store-link">Магазин</span>
+        <span onclick="LinkToPrint()" class="print-link">Друк та оформлення</span>
+        <span onclick="LinkToContacts()" class="contact-link">Контакти</span>
+    </div>
+    <div class="cart-icon">
+        <img src="images/shoping_icon.svg" alt="Shopping Cart">
+        <span class="cart-count">0</span>
+    </div>
+    <div class="hamburger-menu" onclick="toggleMenu()">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </div>
+    <div class="dropdown-menu">
+        <span onclick="LinkToAnalogCams()" class="analog-cam-link">Аналогові камери</span>
+        <span onclick="LinkToShop()" class="store-link">Магазин</span>
+        <span onclick="LinkToPrint()" class="print-link">Друк та оформлення</span>
+        <span onclick="LinkToContacts()" class="contact-link">Контакти</span>
+    </div>
+</header>
+<main class="page-main">
+    <h2>Оформлення замовлення</h2>
+    <form id="order-form">
+        <label for="name">Ім'я:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="address">Адреса:</label>
+        <input type="text" id="address" name="address" required>
+
+        <button type="submit">Підтвердити замовлення</button>
+    </form>
+</main>
+<footer class="site-footer">
+    <div class="footer-nav">
+        <div class="contact-info">
+            <img onclick="scrollToTop()" src="images/Logo36thInvert.png" alt="FilmCam image">
+            <div class="working-hours">
+                <span>Пн-Нд 11:00 — 19:00</span>
+            </div>
+            <div class="phone-number">
+                <span>067-463-75-53</span>
+            </div>
+            <div class="address">
+                <span>вул. Івана Кавалерідзе, 8</span>
+            </div>
+            <div class="social-media-icons">
+                <img class="first-icon" src="images/Teleg.svg" alt="Telegram icon">
+                <img src="images/Inst.svg" alt="Inst icon">
+                <img src="images/TT.svg" alt="TT icon">
+                <img src="images/YT.svg" alt="YT icon">
+            </div>
+        </div>
+        <div class="nav-links">
+            <span onclick="LinkToContacts()">Про нас</span>
+            <span>Доставка і оплата</span>
+            <span onclick="LinkToContacts()">Контакти</span>
+        </div>
+        <div class="product-categories">
+            <span onclick="LinkToShop()">Плівка</span>
+            <span>Касети</span>
+            <span onclick="LinkToAnalogCams()">Камери</span>
+            <span>Аксесуари</span>
+        </div>
+        <div class="services">
+            <span>Оренда камер</span>
+            <span onclick="LinkToPrint()">Друк фото</span>
+            <span onclick="LinkToPrint()">Друк зінів</span>
+        </div>
+    </div>
+</footer>
+<!--Поп-ап корзини замовлень-->
+<div id="cart-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-cart">&times;</span>
+        <h2 class="pop-head">Кошик</h2>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+            <span>Загальна вартість: </span><span class="total-price">0 ₴</span>
+        </div>
+    </div>
+</div>
+<script src="/JS/Cart.js"></script>
+<script src="JS/MakeAnOrder.js"></script>
+<script src="JS/Links.js"></script>
+</body>
+</html>

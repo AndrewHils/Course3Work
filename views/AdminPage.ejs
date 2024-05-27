@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>36th Frame</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Arial&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel="stylesheet" href="/CSS/AdminPage.css">
+</head>
+<body>
+<header class="site-header">
+    <div onclick="LinkToMainPage()" class="logo">
+        <img src="/images/Title36.png" alt="36th Frame Logo">
+    </div>
+    <div class="header-links">
+        <span onclick="LinkToAnalogCams()" class="analog-cam-link">Аналогові камери</span>
+        <span onclick="LinkToShop()" class="store-link">Магазин</span>
+        <span onclick="LinkToPrint()" class="print-link">Друк та оформлення</span>
+        <span onclick="LinkToContacts()" class="contact-link">Контакти</span>
+    </div>
+    <div class="cart-icon">
+        <img src="/images/shoping_icon.svg" alt="Shopping Cart">
+        <span class="cart-count">0</span>
+    </div>
+    <div class="hamburger-menu" onclick="toggleMenu()">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </div>
+    <div class="dropdown-menu">
+        <span onclick="LinkToAnalogCams()" class="analog-cam-link">Аналогові камери</span>
+        <span onclick="LinkToShop()" class="store-link">Магазин</span>
+        <span onclick="LinkToPrint()" class="print-link">Друк та оформлення</span>
+        <span onclick="LinkToContacts()" class="contact-link">Контакти</span>
+    </div>
+</header>
+<main>
+    <div class="head-admin">
+        <h2>Вітаємо на сторінці Адміністратора</h2>
+        <div class="text-admin">На цій сторінці Ви маєте змогу переглянути наявні Замовлення та Питання від користувачів,
+        поставити відповідний статус до замовлення та створити новий Товар.</div>
+    </div>
+    <section id="orders-section">
+        <h2>Замовлення</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Cart</th>
+                <th>Status</th>
+                <th>Created At</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% if (orders.length > 0) { %>
+                <% orders.forEach(order => { %>
+                    <tr>
+                        <td><%= order.id %></td>
+                        <td><%= order.name %></td>
+                        <td><%= order.phone %></td>
+                        <td><%= order.email %></td>
+                        <td><%= order.address %></td>
+                        <td>
+                            <% if (order.cart) { %>
+                                <% JSON.parse(order.cart).forEach(item => { %>
+                                    <div>
+                                        <img src="<%= item.image %>" alt="<%= item.name %>" width="50">
+                                        <span><%= item.name %> - <%= item.price %> ₴</span>
+                                    </div>
+                                <% }) %>
+                            <% } %>
+                        </td>
+                        <td>
+                            <select class="status-select" data-order-id="<%= order.id %>">
+                                <option value="Pending" <%= order.status === 'Pending' ? 'selected' : '' %>>Pending</option>
+                                <option value="Processing" <%= order.status === 'Processing' ? 'selected' : '' %>>Processing</option>
+                                <option value="Completed" <%= order.status === 'Completed' ? 'selected' : '' %>>Completed</option>
+                                <option value="Cancelled" <%= order.status === 'Cancelled' ? 'selected' : '' %>>Cancelled</option>
+                            </select>
+                        </td>
+                        <td><%= new Date(order.created_at).toLocaleDateString() %></td>
+                        <td>
+                            <button class="delete-order-btn" data-order-id="<%= order.id %>">Delete</button>
+                        </td>
+                    </tr>
+                <% }) %>
+            <% } else { %>
+                <tr>
+                    <td colspan="9">No orders found</td>
+                </tr>
+            <% } %>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="questions-section">
+        <h2>Питання</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Created At</th>
+                <th>Note</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% if (questions.length > 0) { %>
+                <% questions.forEach(question => { %>
+                    <tr>
+                        <td><%= question.id %></td>
+                        <td><%= question.name %></td>
+                        <td><%= question.phone %></td>
+                        <td><%= question.email %></td>
+                        <td><%= new Date(question.created_at).toLocaleDateString() %></td>
+                        <td><%= question.note %></td>
+                    </tr>
+                <% }) %>
+            <% } else { %>
+                <tr>
+                    <td colspan="6">No questions found</td>
+                </tr>
+            <% } %>
+            </tbody>
+        </table>
+    </section>
+</main>
+<footer class="site-footer">
+    <div class="footer-nav">
+        <div class="contact-info">
+            <img onclick="scrollToTop()" src="/images/Logo36thInvert.png" alt="FilmCam image">
+            <div class="working-hours">
+                <span>Пн-Нд 11:00 — 19:00</span>
+            </div>
+            <div class="phone-number">
+                <span>067-463-75-53</span>
+            </div>
+            <div class="address">
+                <span>вул. Івана Кавалерідзе, 8</span>
+            </div>
+            <div class="social-media-icons">
+                <img class="first-icon" src="/images/Teleg.svg" alt="Telegram icon">
+                <img src="/images/Inst.svg" alt="Inst icon">
+                <img src="/images/TT.svg" alt="TT icon">
+                <img src="/images/YT.svg" alt="YT icon">
+            </div>
+        </div>
+        <div class="nav-links">
+            <span onclick="LinkToContacts()">Про нас</span>
+            <span>Доставка і оплата</span>
+            <span onclick="LinkToContacts()">Контакти</span>
+        </div>
+        <div class="product-categories">
+            <span onclick="LinkToShop()">Плівка</span>
+            <span>Касети</span>
+            <span onclick="LinkToAnalogCams()">Камери</span>
+            <span>Аксесуари</span>
+        </div>
+        <div class="services">
+            <span>Оренда камер</span>
+            <span onclick="LinkToPrint()">Друк фото</span>
+            <span onclick="LinkToPrint()">Друк зінів</span>
+        </div>
+    </div>
+</footer>
+<!--Поп-ап корзини замовлень-->
+<div id="cart-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-cart">&times;</span>
+        <h2 class="pop-head">Кошик</h2>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+            <span>Загальна вартість: </span><span class="total-price">0 ₴</span>
+        </div>
+        <button onclick="LinkToChekOut()" class="checkout-btn">Замовити</button>
+    </div>
+</div>
+<script src="/JS/AdminSel.js"></script>
+<script src="/JS/Links.js"></script>
+<script src="/JS/Cart.js"></script>
+</body>
+</html>

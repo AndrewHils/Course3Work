@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>36th Frame</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Arial&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel="stylesheet" href="/CSS/ContactsP.css">
+</head>
+<body>
+<header class="site-header">
+    <div onclick="LinkToMainPage()" class="logo">
+        <img src="/images/Title36.png" alt="36th Frame Logo">
+    </div>
+    <div class="header-links">
+        <span onclick="LinkToAnalogCams()" class="analog-cam-link">Аналогові камери</span>
+        <span onclick="LinkToShop()" class="store-link">Магазин</span>
+        <span onclick="LinkToPrint()" class="print-link">Друк та оформлення</span>
+        <span onclick="LinkToContacts()" class="contact-link">Контакти</span>
+    </div>
+    <div class="cart-icon">
+        <img src="/images/shoping_icon.svg" alt="Shopping Cart">
+        <span class="cart-count">0</span>
+    </div>
+    <div class="hamburger-menu" onclick="toggleMenu()">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </div>
+    <div class="dropdown-menu">
+        <span onclick="LinkToAnalogCams()" class="analog-cam-link">Аналогові камери</span>
+        <span onclick="LinkToShop()" class="store-link">Магазин</span>
+        <span onclick="LinkToPrint()" class="print-link">Друк та оформлення</span>
+        <span onclick="LinkToContacts()" class="contact-link">Контакти</span>
+    </div>
+</header>
+<main class="page-main">
+    <div class="links-to-back">
+        <span onclick="LinkToMainPage()" class="links">Головна сторінка >> </span>
+        <span onclick="LinkToShop()" class="links">Магазин >> </span>
+        <span class="links-now">Широка 120-мм плівка (тип 120)</span>
+    </div>
+    <div class="section-filters">
+        <div class="head-filters">Фільтри</div>
+        <div class="filter-group">
+            <div class="filter-label">Бренди:</div>
+            <label><input type="checkbox" name="brand" value="AGFA"> AGFA</label>
+            <label><input type="checkbox" name="brand" value="CineStill"> CineStill</label>
+            <label><input type="checkbox" name="brand" value="Fomapan"> Fomapan</label>
+            <label><input type="checkbox" name="brand" value="FujiFilm"> FujiFilm</label>
+            <label><input type="checkbox" name="brand" value="Ilford"> Ilford</label>
+            <label><input type="checkbox" name="brand" value="Kentmere"> Kentmere (by Ilford/Harman)</label>
+            <label><input type="checkbox" name="brand" value="Kodak"> Kodak</label>
+            <label><input type="checkbox" name="brand" value="Rollei"> Rollei</label>
+            <label><input type="checkbox" name="brand" value="Roll"> Намотка</label>
+            <label><input type="checkbox" name="brand" value="Other"> Інші</label>
+        </div>
+        <div class="filter-group">
+            <div class="filter-label">Тип плівки:</div>
+            <label><input type="checkbox" name="type" value="ColorNegative"> Кольорова негативна</label>
+            <label><input type="checkbox" name="type" value="ColorPositive"> Кольорова позитивна (слайд)</label>
+            <label><input type="checkbox" name="type" value="BlackWhite"> Чорно-біла</label>
+        </div>
+        <div class="filter-group">
+            <div class="filter-label">Сортувати за:</div>
+            <select name="sort" id="sort-select">
+                <option value="popular">Популярніше</option>
+                <option value="cheaper">Дешевше</option>
+                <option value="expensive">Дорожче</option>
+            </select>
+        </div>
+        <div class="clear-filters-btn">Скинути</div>
+    </div>
+    <div class="section-items">
+        <div class="head-items">Асортимент</div>
+        <div id="products-container" class="product-cards">
+            <% products.forEach(product => { %>
+                <div class="prod-card" data-id="<%= product.IdFilm120 %>">
+                    <img src="<%= product.FrontPhoto120 %>" alt="<%= product.FilmName120 %>">
+                    <span class="product-name"><%= product.FilmName120 %> тип-120</span>
+                    <span class="product-price"><%= product.FilmPrise120 %> ₴</span>
+                    <div class="add-to-cart-btn">Додати у кошик</div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</main>
+<footer class="site-footer">
+    <div class="footer-nav">
+        <div class="contact-info">
+            <img onclick="scrollToTop()" src="/images/Logo36thInvert.png" alt="FilmCam image">
+            <div class="working-hours">
+                <span>Пн-Нд 11:00 — 19:00</span>
+            </div>
+            <div class="phone-number">
+                <span>067-463-75-53</span>
+            </div>
+            <div class="address">
+                <span>вул. Івана Кавалерідзе, 8</span>
+            </div>
+            <div class="social-media-icons">
+                <img class="first-icon" src="/images/Teleg.svg" alt="Telegram icon">
+                <img src="/images/Inst.svg" alt="Inst icon">
+                <img src="/images/TT.svg" alt="TT icon">
+                <img src="/images/YT.svg" alt="YT icon">
+            </div>
+        </div>
+        <div class="nav-links">
+            <span onclick="LinkToContacts()">Про нас</span>
+            <span>Доставка і оплата</span>
+            <span onclick="LinkToContacts()">Контакти</span>
+        </div>
+        <div class="product-categories">
+            <span onclick="LinkToShop()">Плівка</span>
+            <span>Касети</span>
+            <span onclick="LinkToAnalogCams()">Камери</span>
+            <span>Аксесуари</span>
+        </div>
+        <div class="services">
+            <span>Оренда камер</span>
+            <span onclick="LinkToPrint()">Друк фото</span>
+            <span onclick="LinkToPrint()">Друк зінів</span>
+        </div>
+    </div>
+</footer>
+<!-- Разметка всплывающего окна -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+            <h2 class="pop-head" id="product-name"></h2>
+            <img id="main-photo" src="" alt="">
+            <div class="thumbnails">
+                <!-- Маленькие дополнительные фото будут добавляться сюда -->
+            </div>
+            <div class="product-details">
+                <p id="product-desc"></p>
+                <p id="product-type"></p>
+                <p id="product-iso"></p>
+                <p id="product-brand"></p>
+                <p id="product-price"></p>
+            </div>
+            <div class="add-to-cart-btn" id="popup-add-to-cart-btn">Додати у кошик</div>
+        </div>
+    </div>
+</div>
+<!--Поп-ап корзини замовлень-->
+<div id="cart-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-cart">&times;</span>
+        <h2 class="pop-head">Кошик</h2>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+            <span>Загальна вартість: </span><span class="total-price">0 ₴</span>
+        </div>
+        <button onclick="LinkToChekOut()" class="checkout-btn">Замовити</button>
+    </div>
+</div>
+<script src="/JS/Cart.js"></script>
+<script src="/JS/Links.js"></script>
+<script src="/JS/FiltersFor120.js"></script>
+</body>
+</html>
