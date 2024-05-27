@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>36th Frame Shop</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Arial&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="stylesheet" href="CSS/ContactsP.css">
+</head>
+<body>
+<header class="site-header">
+  <div onclick="LinkToMainPage()" class="logo">
+    <img src="images/Title36.png" alt="36th Frame Logo">
+  </div>
+  <div class="header-links">
+    <span onclick="LinkToAnalogCams()" class="analog-cam-link">Аналогові камери</span>
+    <span onclick="LinkToShop()" class="store-link">Магазин</span>
+    <span onclick="LinkToPrint()" class="print-link">Друк та оформлення</span>
+    <span onclick="LinkToContacts()" class="contact-link">Контакти</span>
+  </div>
+  <div class="cart-icon">
+    <img src="images/shoping_icon.svg" alt="Shopping Cart">
+    <span class="cart-count">0</span>
+  </div>
+  <div class="hamburger-menu" onclick="toggleMenu()">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </div>
+  <div class="dropdown-menu">
+    <span onclick="LinkToAnalogCams()" class="analog-cam-link">Аналогові камери</span>
+    <span onclick="LinkToShop()" class="store-link">Магазин</span>
+    <span onclick="LinkToPrint()" class="print-link">Друк та оформлення</span>
+    <span onclick="LinkToContacts()" class="contact-link">Контакти</span>
+  </div>
+</header>
+<main class="print-page">
+  <div class="open-section">
+    <img src="images/BlackBirdPrint.jpg" alt="Open Print Img">
+    <div>
+      <div class="head-print-op">Професійний фотодрук та оформлення</div>
+      <div class="open-text">
+        <p id="typing-text"></p>
+      </div>
+    </div>
+  </div>
+  <div class="paper-section">
+    <img src="images/PhoenixPrint.jpg" alt="Paper Print Img">
+    <div class="text-paper-sec">
+      <div class="head-paper">Наша апаратура та папір для друку</div>
+      <div class="text-paper">
+        <p>Ми пропонуємо широкий вибір принтерів від провідних виробників, які забезпечать вас високоякісним друком вашої творчості. Кращі принтери, які ми пропонуємо:</p>
+        <ul>
+          <li>
+            <strong>Canon PIXMA Pro-100:</strong> Ідеальний вибір для професійних фотографів, цей принтер відмінно справляється з відтворенням кольорів і деталей вашого зображення.
+          </li>
+          <li>
+            <strong>Epson SureColor P800:</strong> Цей принтер вражає якістю свого друку, забезпечуючи гладкі переходи кольорів і багату гаму відтінків.
+          </li>
+          <li>
+            <strong>HP Envy Photo 7155:</strong> Призначений для широкого спектру використання, цей принтер забезпечить якісний друк вашої фотографії або документів.
+          </li>
+        </ul>
+        <p>Також ми маємо великий вибір високоякісного паперу для друку, завдяки якому Ви отримаєте найкращий результат:</p>
+        <ul>
+          <li>
+            <strong>Epson Premium Glossy Photo Paper:</strong> Цей глянцевий фотопапір від Epson забезпечує яскраві, насичені кольори і гладкість поверхні.
+          </li>
+          <li>
+            <strong>Canon Photo Paper Pro Platinum:</strong> Високоякісний фотопапір від Canon, який забезпечить вам глибокий чорний та яскраві кольори.
+          </li>
+          <li>
+            <strong>HP Premium Plus Photo Paper:</strong> За допомогою цього фотопаперу від HP ваші фотографії будуть виглядати неймовірно реалістично і яскраво.
+          </li>
+        </ul>
+        <p class="final-txt">Ваші фотографії - наше джерело натхнення. Зробіть їх неперевершеними разом з нами!</p>
+      </div>
+    </div>
+  </div>
+  <div class="print-prise-section">
+    <img src="images/KodakColorPlusPrint.jpg" alt="Paper Print Img">
+    <div class="prise-table">
+      <div class="head-table">Таблиця ціни друку</div>
+      <table>
+        <thead>
+        <tr>
+          <th>Кількість</th>
+          <th>Canon PIXMA Pro-100</th>
+          <th>Epson SureColor P800</th>
+          <th>HP Envy Photo 7155</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>1-10</td>
+          <td>25 ₴ за аркуш</td>
+          <td>30 ₴ за аркуш</td>
+          <td>20 ₴ за аркуш</td>
+        </tr>
+        <tr>
+          <td>11-50</td>
+          <td>22 ₴ за аркуш</td>
+          <td>27 ₴ за аркуш</td>
+          <td>18 ₴ за аркуш</td>
+        </tr>
+        <tr>
+          <td>51-100</td>
+          <td>20 ₴ за аркуш</td>
+          <td>25 ₴ за аркуш</td>
+          <td>16 ₴ за аркуш</td>
+        </tr>
+        <tr>
+          <td>101+</td>
+          <td>18 ₴ за аркуш</td>
+          <td>22 ₴ за аркуш</td>
+          <td>14 ₴ за аркуш</td>
+        </tr>
+        <tr>
+          <td>З оформленням</td>
+          <td>Додатково 10 ₴ за аркуш</td>
+          <td>Додатково 12 ₴ за аркуш</td>
+          <td>Додатково 8 ₴ за аркуш</td>
+        </tr>
+        </tbody>
+      </table>
+      <div onclick="LinkToPrintToOrder()" class="question-btn">Замовити</div>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-nav">
+    <div class="contact-info">
+      <img onclick="scrollToTop()" src="images/Logo36thInvert.png" alt="FilmCam image">
+      <div class="working-hours">
+        <span>Пн-Нд 11:00 — 19:00</span>
+      </div>
+      <div class="phone-number">
+        <span>067-463-75-53</span>
+      </div>
+      <div class="address">
+        <span>вул. Івана Кавалерідзе, 8</span>
+      </div>
+      <div class="social-media-icons">
+        <img class="first-icon" src="images/Teleg.svg" alt="Telegram icon">
+        <img src="images/Inst.svg" alt="Inst icon">
+        <img src="images/TT.svg" alt="TT icon">
+        <img src="images/YT.svg" alt="YT icon">
+      </div>
+    </div>
+    <div class="nav-links">
+      <span onclick="LinkToContacts()">Про нас</span>
+      <span>Доставка і оплата</span>
+      <span onclick="LinkToContacts()">Контакти</span>
+    </div>
+    <div class="product-categories">
+      <span onclick="LinkToShop()">Плівка</span>
+      <span>Касети</span>
+      <span onclick="LinkToAnalogCams()">Камери</span>
+      <span>Аксесуари</span>
+    </div>
+    <div class="services">
+      <span>Оренда камер</span>
+      <span onclick="LinkToPrint()">Друк фото</span>
+      <span onclick="LinkToPrint()">Друк зінів</span>
+    </div>
+  </div>
+</footer>
+<!--Поп-ап корзини замовлень-->
+<div id="cart-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-cart">&times;</span>
+    <h2 class="pop-head">Кошик</h2>
+    <div class="cart-items"></div>
+    <div class="cart-total">
+      <span>Загальна вартість: </span><span class="total-price">0 ₴</span>
+    </div>
+    <button onclick="LinkToChekOut()" class="checkout-btn">Замовити</button>
+  </div>
+</div>
+<script src="/JS/Cart.js"></script>
+<script src="JS/Links.js"></script>
+<script src="JS/TypeText.js"></script>
+</body>
+</html>

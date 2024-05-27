@@ -1,0 +1,99 @@
+/* Стилі для форми поп-ап адмін*/
+.popup {
+    display: none; /* Початково приховуємо поп-ап */
+    position: fixed; /* Фіксоване розташування */
+    z-index: 1000; /* Значення індексу зверху */
+    left: 0;
+    top: 0;
+    width: 100%; /* Заповнює весь екран по ширині */
+    height: 100%; /* Заповнює весь екран по висоті */
+    overflow: auto; /* Дозволяє прокрутку, якщо контент перевищує розмір екрану */
+    background-color: rgba(0, 0, 0, 0.4); /* Напівпрозорий чорний колір для підкладки */
+}
+
+.popup-content {
+    background-color: #fefefe; /* Колір фону внутрішнього контенту поп-ап */
+    margin: 2% auto; /* Відступи від країв екрану */
+    padding: 20px; /* Відступи від внутрішнього вмісту до країв контейнера */
+    border: 1px solid #888; /* Тіньова рамка */
+    width: 80%; /* Ширина контенту поп-ап, відсотки від ширини екрану */
+    max-width: 600px; /* Максимальна ширина контенту поп-ап */
+    border-radius: 10px; /* Закругленість кутиків контейнера */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь */
+    animation: popup-animation 0.3s ease-out; /* Анімація з'явлення поп-ап */
+}
+
+@keyframes popup-animation {
+    from { transform: scale(0.7); opacity: 0; } /* Початкові значення анімації */
+    to { transform: scale(1); opacity: 1; } /* Кінцеві значення анімації */
+}
+
+.close {
+    color: #aaa; /* Колір тексту */
+    float: right; /* Плаваюче розташування справа */
+    font-size: 28px; /* Розмір шрифту */
+    font-weight: bold; /* Жирний шрифт */
+    margin-top: -5px; /* Зовнішній відступ вгору */
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.popup-content h2 {
+    margin-top: 0;
+    font-family: 'Roboto', serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.popup-content label {
+    display: block;
+    font-family: 'Roboto', serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.popup-content input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Roboto', serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.popup-content button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 6px;
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    font-family: 'Inter', serif;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.popup-content button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+#loginError {
+    color: red;
+    margin-top: 10px;
+    font-family: 'Roboto', serif;
+    font-size: 16px;
+    display: none;
+}
+

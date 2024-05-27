@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>36th Frame Shop</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Arial&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="stylesheet" href="CSS/ContactsP.css">
+</head>
+<body>
+<header class="site-header">
+  <div onclick="LinkToMainPage()" class="logo">
+    <img src="images/Title36.png" alt="36th Frame Logo">
+  </div>
+  <div class="header-links">
+    <span onclick="LinkToAnalogCams()" class="analog-cam-link">Аналогові камери</span>
+    <span onclick="LinkToShop()" class="store-link">Магазин</span>
+    <span onclick="LinkToPrint()" class="print-link">Друк та оформлення</span>
+    <span onclick="LinkToContacts()" class="contact-link">Контакти</span>
+  </div>
+  <div class="cart-icon">
+    <img src="images/shoping_icon.svg" alt="Shopping Cart">
+    <span class="cart-count">0</span>
+  </div>
+  <div class="hamburger-menu" onclick="toggleMenu()">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </div>
+  <div class="dropdown-menu">
+    <span onclick="LinkToAnalogCams()" class="analog-cam-link">Аналогові камери</span>
+    <span onclick="LinkToShop()" class="store-link">Магазин</span>
+    <span onclick="LinkToPrint()" class="print-link">Друк та оформлення</span>
+    <span onclick="LinkToContacts()" class="contact-link">Контакти</span>
+  </div>
+</header>
+<main class="contact-page">
+  <div class="section-about">
+    <div class="head-about">Трішечки про нас</div>
+    <div class="about-text">
+      Звільнити креативну енергію, захоплюючись минулим і створюючи майбутнє - ось наш гасло в світі аналогової фотографії. У Про нас розділі ми розкажемо трохи більше про нашу компанію, про те, як ми почали свій шлях і що нас надихає.
+      <p>Наша компанія виникла з мрії привнести красу і неповторність аналогової фотографії в сучасний світ. Ми віримо в силу кожного моменту, кожної емоції, які можна зафіксувати лише на плівку. Кожна камера, кожна плівка, кожен кадр - це окремий шедевр, що зберігається назавжди.</p>
+      <p>Наша місія - зробити аналогову фотографію доступною для кожного. Ми пропонуємо широкий вибір аналогових камер, об'єктивів і плівки, щоб кожен міг знайти свій унікальний шлях у світі фотографії. Ми ретельно відбираємо продукцію, щоб забезпечити нашим клієнтам найвищу якість і найбільш різноманітний вибір.</p>
+      <p>У нашому асортименті ви знайдете все необхідне для творчості: від класичних аналогових камер до найсучасніших плівок для будь-якого стилю і настрою. Ми пропонуємо не лише продукцію, але і підтримку та поради для наших клієнтів. Приєднуйтесь до нашої спільноти творчих фотографів та збудуйте свій власний шлях у світі аналогової фотографії з нами!</p>
+    </div>
+  </div>
+  <div class="section-contacts">
+    <div class="head-about">Контакти</div>
+    <div class="contact-sec">
+      <p>З будь-яких питань: <a href="tel:+380674637553">+38 067 463 75 53</a></p>
+      <p>З питань друку: <a href="tel:+380674637554">+38 067 463 75 54</a></p>
+      <p>Пошта: <a href="mailto:36thFrame@exemple.com">36thFrame@exemple.com</a></p>
+      <p><a href="https://www.google.com/maps/search/?api=1&query=Київ, вул. Івана Кавалерідзе, буд.8" target="_blank">Київ, Подільський район, вул. Івана Кавалерідзе, буд.8</a></p>
+      <p>Понеділок - Неділя 11:00 — 19:00</p>
+    </div>
+    <div class="soc-med-con">
+      <img class="first-icon" src="images/Teleg.svg" alt="Telegram icon">
+      <img src="images/Inst.svg" alt="Inst icon">
+      <img src="images/TT.svg" alt="TT icon">
+      <img src="images/YT.svg" alt="YT icon">
+    </div>
+  </div>
+  <div class="contin-2sec">
+    <div class="section-map">
+      <div class="head-about">Місцезнаходження</div>
+      <div class="map" id="map"></div>
+    </div>
+    <div id="print-order" class="section-questions">
+      <div class="head-about">Маєте питання ?</div>
+      <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я">
+      <input type="email" id="email" name="email" placeholder="Введіть ваш email">
+      <input type="phone" id="phone" name="phone" placeholder="Введіть ваш номер телефону">
+      <textarea id="comment" name="comment" placeholder="Повідомлення"></textarea>
+      <div class="question-btn">Відправити</div>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-nav">
+    <div class="contact-info">
+      <img onclick="scrollToTop()" src="images/Logo36thInvert.png" alt="FilmCam image">
+      <div class="working-hours">
+        <span>Пн-Нд 11:00 — 19:00</span>
+      </div>
+      <div class="phone-number">
+        <span>067-463-75-53</span>
+      </div>
+      <div class="address">
+        <span>вул. Івана Кавалерідзе, 8</span>
+      </div>
+      <div class="social-media-icons">
+        <img class="first-icon" src="images/Teleg.svg" alt="Telegram icon">
+        <img src="images/Inst.svg" alt="Inst icon">
+        <img src="images/TT.svg" alt="TT icon">
+        <img src="images/YT.svg" alt="YT icon">
+      </div>
+    </div>
+    <div class="nav-links">
+      <span onclick="LinkToContacts()">Про нас</span>
+      <span>Доставка і оплата</span>
+      <span onclick="LinkToContacts()">Контакти</span>
+    </div>
+    <div class="product-categories">
+      <span onclick="LinkToShop()">Плівка</span>
+      <span>Касети</span>
+      <span onclick="LinkToAnalogCams()">Камери</span>
+      <span>Аксесуари</span>
+    </div>
+    <div class="services">
+      <span>Оренда камер</span>
+      <span onclick="LinkToPrint()">Друк фото</span>
+      <span onclick="LinkToPrint()">Друк зінів</span>
+    </div>
+  </div>
+</footer>
+<!--Поп-ап корзини замовлень-->
+<div id="cart-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-cart">&times;</span>
+    <h2 class="pop-head">Кошик</h2>
+    <div class="cart-items"></div>
+    <div class="cart-total">
+      <span>Загальна вартість: </span><span class="total-price">0 ₴</span>
+    </div>
+    <button onclick="LinkToChekOut()" class="checkout-btn">Замовити</button>
+  </div>
+</div>
+<script src="/JS/Cart.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkrHCtZ41o3E8nUI3bw-zidDTteq6m-l0&callback=initMap"></script>
+<script src="JS/SubmitContact.js"></script>
+<script src="JS/Links.js"></script>
+<script src="JS/Map.js"></script>
+</body>
+</html>

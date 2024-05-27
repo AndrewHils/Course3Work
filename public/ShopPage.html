@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>36th Frame Shop</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Arial&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/ShopP.css">
+</head>
+<body>
+<header class="site-header">
+    <div onclick="LinkToMainPage()" class="logo">
+      <img src="images/Title36.png" alt="36th Frame Logo">
+    </div>
+    <div class="header-links">
+      <span onclick="LinkToAnalogCams()" class="analog-cam-link">Аналогові камери</span>
+      <span onclick="LinkToShop()" class="store-link">Магазин</span>
+      <span onclick="LinkToPrint()" class="print-link">Друк та оформлення</span>
+      <span onclick="LinkToContacts()" class="contact-link">Контакти</span>
+    </div>
+    <div class="cart-icon">
+      <img src="images/shoping_icon.svg" alt="Shopping Cart">
+      <span class="cart-count">0</span>
+    </div>
+    <div class="hamburger-menu" onclick="toggleMenu()">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </div>
+    <div class="dropdown-menu">
+        <span onclick="LinkToAnalogCams()" class="analog-cam-link">Аналогові камери</span>
+        <span onclick="LinkToShop()" class="store-link">Магазин</span>
+        <span onclick="LinkToPrint()" class="print-link">Друк та оформлення</span>
+        <span onclick="LinkToContacts()" class="contact-link">Контакти</span>
+    </div>
+</header>
+<!-- У цьому розділі містяться посилання на різні категорії товарів, такі як різні типи фотоплівки та інші предмети, які продаються в магазині. -->
+<main class="page-shop-main">
+    <div class="section-categories">
+        <div class="head-categories">Категорії</div>
+        <div class="list-categories">
+            <div class="film35-link">
+                <img onclick="LinkTo135Film()" src="images/135Film.png" alt="135">
+                <div class="categories-text">Вузька 35-мм плівка (тип 135)</div>
+            </div>
+            <div class="film120-link">
+                <img onclick="LinkTo120Film()" src="images/120Film.png" alt="120">
+                <div class="categories-text">Середній формат (тип 120)</div>
+            </div>
+            <div class="instax-link">
+                <img onclick="LinkToInstant()" src="images/Instax.png" alt="Instax">
+                <div class="categories-text">Картриджи для миттєвої фотографії</div>
+            </div>
+            <div class="batteries-link">
+                <img src="images/Bat.png" alt="Batteries">
+                <div class="categories-text">Батарейки</div>
+            </div>
+        </div>
+    </div>
+    <!-- Секція популярних товарів -->
+    <div class="section-pop-purch">
+        <div class="head-categories">Популярні позиції</div>
+        <div class="list-pop">
+            <div class="prod-card">
+                <img src="images/KodakGold200.png" alt="Kodak Gold 200">
+                <span class="product-name">Kodak Gold 200 тип-135</span>
+                <span class="product-price">550.00 ₴</span>
+                <div class="add-to-cart-btn">Додати у кошик</div>
+            </div>
+            <div class="prod-card">
+                <img src="images/ColarPlus.png" alt="Kodak ColorPlus">
+                <span class="product-name">Kodak ColorPlus 200 тип-135</span>
+                <span class="product-price">550.00 ₴</span>
+                <div class="add-to-cart-btn">Додати у кошик</div>
+            </div>
+            <div class="prod-card">
+                <img src="images/InstaxImg.png" alt="Instax mini">
+                <span class="product-name">Картридж Fujifilm Instax Mini</span>
+                <span class="product-price">380.00 ₴</span>
+                <div class="add-to-cart-btn">Додати у кошик</div>
+            </div>
+            <div class="prod-card">
+                <img src="images/Portra400.png" alt="Kodak Portra 400">
+                <span class="product-name">Kodak Portra 400 тип-135</span>
+                <span class="product-price">800.00 ₴</span>
+                <div class="add-to-cart-btn">Додати у кошик</div>
+            </div>
+            <div class="prod-card">
+                <img src="images/Kodak5222.png" alt="Kodak5222">
+                <span class="product-name">Kodak Eastman Double X 5222</span>
+                <span class="product-price">300.00 ₴</span>
+                <div class="add-to-cart-btn">Додати у кошик</div>
+            </div>
+            <div class="prod-card">
+                <img src="images/Vision3.png" alt="Kodak Vision3">
+                <span class="product-name">Kodak Vision3 250D тип-135</span>
+                <span class="product-price">350.00 ₴</span>
+                <div class="add-to-cart-btn">Додати у кошик</div>
+            </div>
+        </div>
+    </div>
+<!--    Секція опису    -->
+    <div class="section-description">
+        <p>У  асортименті нашого магазину Ви знайдете різноманітну фотоплівку від передових виробників, таких як Agfa, Kodak, Fujifilm, Ilford, CineStill, Rollei та багато інших. Ми спеціалізуємося на негативній кольоровій, чорно-білій та слайдовій фотоплівці.</p>
+
+        <p>Щоб задовольнити навіть найвибагливіших фотографів, ми також пропонуємо касети для Fujifilm Instax Mini, Square, Wide.</p>
+        <p>Крім того, маючи значний досвід у сфері друку, ми надаємо послуги друкування, дозволяючи вам зафіксувати найтепліші моменти у фотоальбомах або оформити їх.</p>
+
+        <p>Дозвольте кожному кадру стати важливим моментом вашого життя!</p>
+    </div>
+    <!--    Секція QA   -->
+    <div class="section-QA">
+        <div class="question">Яка плівка мені підійде?
+            <img class="triangle-icon" src="images/triang.svg" alt="Btn" onclick="setupTriangleClickHandlers()">
+            <div class="answer">Вибір плівки залежить від багатьох факторів, таких як ваші особисті вподобання щодо колірності, кінцевого відтворення зображення, швидкості плівки та її роздільної здатності.
+                <p>Якщо ви новачок у світі аналогової фотографії, рекомендуємо спробувати універсальну плівку, яка підходить для більшості ситуацій, наприклад, Kodak Gold, Kodak UltraMax або Fujifilm Superia.
+                Ці плівки мають високу якість зображення та добре відтворюють кольори. Якщо ви шукаєте щось для специфічних умов зйомки, наприклад, зйомка в низьких світлових умовах або потребуєте великого діапазону експозиції, варто звернутися до спеціалізованих плівок, таких як Kodak Tri-X для чорно-білих знімків або Phoenix 200 для яскравих та насичених кольорів.</p>
+                <p>Найкраще обрати плівку, яка відповідає вашим потребам та стилю зйомки.</p>
+            </div>
+        </div>
+        <div class="question">Для чого треба широка плівка?
+            <img class="triangle-icon" src="images/triang.svg" alt="Btn" onclick="setupTriangleClickHandlers()">
+            <div class="answer">
+                Широка плівка має кілька переваг, що роблять її популярним вибором для фотографів:
+                <li>
+                    <strong>Більший динамічний діапазон:</strong> Широка плівка може зафіксувати широкий діапазон тонів, відтінків і кольорів у порівнянні зі звичайними форматами плівки. Це дозволяє отримати більш деталізовані та насичені зображення.
+                </li>
+                <li>
+                    <strong>Висока якість зображення:</strong> Більша площа плівки дозволяє зафіксувати більше деталей та інформації, що веде до високоякісних зображень з більшою роздільною здатністю.
+                </li>
+                <li>
+                    <strong>Широкий кут огляду:</strong> Широка плівка дозволяє зафіксувати ширший кут огляду, що корисно для пейзажної, архітектурної та панорамної фотографії.
+                </li>
+                <li>
+                    <strong>Можливість обробки та збільшення зображень:</strong> Більший розмір плівки дозволяє створювати друковані фотографії великого формату з високою деталізацією без втрати якості.
+                </li>
+                <p>Загалом, широка плівка є потужним інструментом для фотографів, які шукають високоякісні, деталізовані та вражаючі зображення.</p>
+            </div>
+        </div>
+        <div class="question">В чому різниця між негативом та слайдом?
+            <img class="triangle-icon" src="images/triang.svg" alt="Btn" onclick="setupTriangleClickHandlers()">
+            <div class="answer">
+                <p>Негативна фотоплівка зазвичай використовується для створення копій позитивних зображень під час процесу друку.
+                    Коли фотографується сцена, зображення, яке фіксується на негативній фотоплівці, з'являється в зворотному порядку кольорів. Однак при використанні цього негативу для друку в темно кімнаті або за допомогою цифрового сканування, воно може бути перетворено на позитивне зображення з правильним порядком кольорів.</p>
+                <p>Слайдова фотоплівка, натомість, була призначена для безпосереднього перегляду зображень за допомогою проектора слайдів або підсвічування. Коли фотографується сцена на слайдовій фотоплівці, результатом є позитивне зображення, яке можна дивитися безпосередньо без будь-якого додаткового оброблення або друку.
+                    Такий формат був особливо поширений для презентацій, лекцій або виставок, де зображення відтворювалось на екрані за допомогою проектора.</p>
+            </div>
+        </div>
+        <div class="question">Як зарядити плівку в фотоапарат?
+            <img class="triangle-icon" src="images/triang.svg" alt="Btn" onclick="setupTriangleClickHandlers()">
+            <div class="answer">
+                <p>Для механічних фотоапаратів, які використовують плівку 35 мм, процес заряджання плівки включає вставку нової плівки в фотоапарат та її правильне намотування вручну.
+                    Зазвичай, інструкція по заряджанню плівки може бути знайдена в інтернеті для вашого конкретного фотоапарата.
+                <p>Пам'ятайте про те, що плівка повинна бути захищена від світла, тому краще заряджати її в темному або слабо освітленому приміщенні.</p>
+                <p>Для напів-автоматичних плівкових камер процес заряджання плівки може бути набагато простішим порівняно з повністю механічними моделями.
+                    Зазвичай, ці камери мають автоматичну або напів-автоматичну систему намотування плівки. Деякі камери можуть автоматично намотувати плівку після кожного знімку, в інших же може бути необхідно вручну перемотувати плівку за допомогою важеля або кнопки.
+                <p>Для заряджання плівки в напів-автоматичну камеру, спочатку вставте нову плівку в камеру. Потім трохи відтягніть "лідер" та помістіть під металевий важель з іншого боку камери. Процес намотування плівки має розпочатися.</p>
+            </div>
+        </div>
+        <div class="question">Як зберігати плівку та негативи?
+            <img class="triangle-icon" src="images/triang.svg" alt="Btn" onclick="setupTriangleClickHandlers()">
+            <div class="answer">
+                <p>Зберігання плівки та негативів важливо для збереження якості зображень та їх тривалого терміну зберігання. Ось кілька порад:</p>
+                <ol>
+                    <li><strong>Температура і вологість:</strong> Зберігайте плівку та негативи в прохолодному та сухому місці. Висока температура і вологість можуть призвести до зміни якості та виникнення плісняви.</li>
+
+                    <li><strong>Світло:</strong> Уникайте прямого сонячного світла. Вони повинні бути збережені в темному місці, щоб уникнути впливу ультрафіолетового випромінювання.</li>
+
+                    <li><strong>Захист від магнітних полів:</strong> Уникайте зберігання плівки поруч з магнітами або електронікою, так як це може призвести до втрати даних.</li>
+
+                    <li><strong>Коробки або паперові конверти:</strong> Зберігайте плівку та негативи у спеціальних коробках або паперових конвертах, щоб захистити їх від пилу та забруднень.</li>
+
+                    <li><strong>Регулярна перевірка:</strong> Час від часу перевіряйте стан плівки та негативів. Якщо ви помітили будь-які ознаки зміни стану (наприклад, зламані або пошкоджені плівки), розгляньте можливість перенесення їх у нові умови зберігання.</li>
+                </ol>
+                <p>Зберігання плівки та негативів у відповідних умовах допоможе зберегти їх якість і дозволить насолоджуватися зображеннями у майбутньому.</p>
+            </div>
+        </div>
+        <div class="question">Що робити після зйомки?
+            <img class="triangle-icon" src="images/triang.svg" alt="Btn" onclick="setupTriangleClickHandlers()">
+            <div class="answer">
+                <p>Спочатку безпечно вийміть плівку з фотоапарата, обережно уникайте прямого сонячного світла та потенційних пошкоджень.
+                    Потім, щоб запобігти змінам в якості зображення, помістіть її у світло-захищений контейнер.
+                    Приносьте плівку до фахівців у лабораторію для процедур прояву та сканування, щоб отримати якісні копії та електронні версії ваших знімків.
+                    Такий підхід забезпечить збереження і якість ваших фотографій.</p>
+            </div>
+        </div>
+        <div class="question1">Як перевірити фотоапарат?
+            <img class="triangle-icon" src="images/triang.svg" alt="Btn" onclick="setupTriangleClickHandlers()">
+            <div class="answer">
+                <p>Перевірка плівкового фотоапарата перед використанням може допомогти у визначенні його працездатності та впевнитися в якості знімків. Ось кілька кроків, які можна виконати:</p>
+                <ol>
+                    <li><strong>Візуальний огляд:</strong> Перевірте зовнішній стан фотоапарата, оберіть чи немає слідів пошкодження або корозії. Переконайтеся, що кнопки, перемикачі та діафрагми працюють належним чином.</li>
+
+                    <li><strong>Вставте плівку:</strong> Установіть плівку в фотоапарат відповідно до інструкції користувача. Переконайтеся, що плівка правильно заряджена та перемотана, якщо потрібно.</li>
+
+                    <li><strong>Проведіть тестові знімки:</strong> Зробіть декілька тестових знімків, перевірте, чи спрацьовують затвор та діафрагма належним чином. При цьому також переконайтеся, що об'єктив не має подряпин або інших дефектів, які можуть вплинути на якість знімків.</li>
+
+                    <li><strong>Перевірте затвор:</strong> Перевірте, чи працює затвор на всіх швидкостях. Зніміть декілька фотографій на різних швидкостях затвору, щоб переконатися, що він працює належним чином.</li>
+
+                    <li><strong>Перевірте вимірювальну систему:</strong> Якщо ваш фотоапарат має вимірювальну систему, переконайтеся, що вона правильно працює і дає точні виміри експозиції.</li>
+                </ol>
+                <p>Перевірка фотоапарата перед використанням допоможе уникнути неприємних сюрпризів під час зйомки і забезпечить якісні результати.</p>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-nav">
+    <div class="contact-info">
+      <img onclick="scrollToTop()" src="images/Logo36thInvert.png" alt="FilmCam image">
+      <div class="working-hours">
+        <span>Пн-Нд 11:00 — 19:00</span>
+      </div>
+      <div class="phone-number">
+        <span>067-463-75-53</span>
+      </div>
+      <div class="address">
+        <span>вул. Івана Кавалерідзе, 8</span>
+      </div>
+      <div class="social-media-icons">
+        <img class="first-icon" src="images/Teleg.svg" alt="Telegram icon">
+        <img src="images/Inst.svg" alt="Inst icon">
+        <img src="images/TT.svg" alt="TT icon">
+        <img src="images/YT.svg" alt="YT icon">
+      </div>
+    </div>
+    <div class="nav-links">
+        <span onclick="LinkToContacts()">Про нас</span>
+        <span>Доставка і оплата</span>
+        <span onclick="LinkToContacts()">Контакти</span>
+    </div>
+    <div class="product-categories">
+        <span onclick="LinkToShop()">Плівка</span>
+        <span>Касети</span>
+        <span onclick="LinkToAnalogCams()">Камери</span>
+      <span>Аксесуари</span>
+    </div>
+    <div class="services">
+      <span>Оренда камер</span>
+        <span onclick="LinkToPrint()">Друк фото</span>
+        <span onclick="LinkToPrint()">Друк зінів</span>
+    </div>
+  </div>
+</footer>
+<!--Поп-ап корзини замовлень-->
+<div id="cart-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-cart">&times;</span>
+        <h2 class="pop-head">Кошик</h2>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+            <span>Загальна вартість: </span><span class="total-price">0 ₴</span>
+        </div>
+        <button onclick="LinkToChekOut()" class="checkout-btn">Замовити</button>
+    </div>
+</div>
+<script src="JS/Cart.js"></script>
+<script src="JS/Links.js"></script>
+</body>
+</html>

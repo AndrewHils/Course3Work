@@ -1,0 +1,53 @@
+.page-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Inter', serif;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input, button {
+    width: 100%;
+    border-radius: 10px;
+    color: black;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    border: 2px solid rgb(0, 0, 0);
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    border-color: black;
+    background-color: white;
+    color: black;
+}
