@@ -54,6 +54,7 @@
                 <th>Email</th>
                 <th>Address</th>
                 <th>Cart</th>
+                <th>Total Amount</th>
                 <th>Status</th>
                 <th>Created At</th>
                 <th>Actions</th>
@@ -62,6 +63,7 @@
             <tbody>
             <% if (orders.length > 0) { %>
                 <% orders.forEach(order => { %>
+                    <% let totalAmount = 0; %> <!-- Ініціалізація змінної для зберігання загальної суми -->
                     <tr>
                         <td><%= order.id %></td>
                         <td><%= order.name %></td>
@@ -74,10 +76,12 @@
                                     <div>
                                         <img src="<%= item.image %>" alt="<%= item.name %>" width="50">
                                         <span><%= item.name %> - <%= item.price %> ₴</span>
+                                        <% totalAmount += item.price; %> <!-- Обчислення загальної суми -->
                                     </div>
                                 <% }) %>
                             <% } %>
                         </td>
+                        <td><%= totalAmount %> ₴</td> <!-- Відображення загальної суми -->
                         <td>
                             <select class="status-select" data-order-id="<%= order.id %>">
                                 <option value="Pending" <%= order.status === 'Pending' ? 'selected' : '' %>>Pending</option>
@@ -133,6 +137,25 @@
             <% } %>
             </tbody>
         </table>
+    </section>
+    <section class="section-questions">
+        <form id="add-product-form" method="post" action="/admin/add_product">
+            <h2>Додати новий товар</h2>
+            <div>
+                <label for="productType">Тип товару:</label>
+                <select id="productType" name="productType" required>
+                    <option value="">Виберіть тип товару</option>
+                    <option value="Film135Table">Вузька 35-мм плівка (тип 135)</option>
+                    <option value="Film120Table">Широка 120-мм плівка (тип 120)</option>
+                    <option value="FilmCams">Камери</option>
+                    <option value="InstantTable">Миттєва плівка</option>
+                </select>
+            </div>
+            <div id="form-fields">
+                <!-- Додаткові поля будуть додані тут динамічно -->
+            </div>
+            <button type="submit" class="question-btn">Додати товар</button>
+        </form>
     </section>
 </main>
 <footer class="site-footer">
