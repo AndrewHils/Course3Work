@@ -438,6 +438,56 @@ app.delete('/delete_order/:id', (req, res) => {
     });
 });
 
+app.post('/admin/add_product', [
+    body('productType').notEmpty().withMessage('Тип товару є обов\'язковим'),
+    body('FilmName').notEmpty().withMessage('Назва є обов\'язковою'),
+    body('FilmPrise').isNumeric().withMessage('Ціна має бути числом'),
+    body('FrontPhoto').notEmpty().withMessage('Фото є обов\'язковим'),
+    body('FilmBrand').notEmpty().withMessage('Бренд є обов\'язковим'),
+    body('FilmType').notEmpty().withMessage('Тип є обов\'язковим'),
+    body('FilmISO').notEmpty().withMessage('ISO є обов\'язковим')
+], (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({ success: false, errors: errors.array() });
+    }
+
+    const { productType, FilmName, FilmPrise, FrontPhoto, BackPhoto, FilmBrand, FilmType, FilmISO, FilmDesc } = req.body;
+
+    let query;
+    let params;
+
+    switch (productType) {
+        case 'Film135Table':
+            query = 'INSERT INTO Film135Table (FilmName, FilmPrise, FrontPhoto, BackPhoto, FilmBrand, FilmType, FilmISO, FilmDesc) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
+            params = [FilmName, FilmPrise, FrontPhoto, BackPhoto, FilmBrand, FilmType, FilmISO, FilmDesc];
+            break;
+        case 'Film120Table':
+            query = 'INSERT INTO Film120Table (FilmName120, FilmPrise120, FrontPhoto120, BackPhoto120, FilmBrand120, FilmType120, FilmISO120, FilmDesc120) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
+            params = [FilmName, FilmPrise, FrontPhoto, BackPhoto, FilmBrand, FilmType, FilmISO, FilmDesc];
+            break;
+        case 'FilmCams':
+            query = 'INSERT INTO FilmCams (CamName, CamPrise, CamFrontPhoto, CamBackPhoto, CamBrand, CamType, CamDesc) VALUES (?, ?, ?, ?, ?, ?, ?)';
+            params = [FilmName, FilmPrise, FrontPhoto, BackPhoto, FilmBrand, FilmType, FilmDesc];
+            break;
+        case 'InstantTable':
+            query = 'INSERT INTO InstantTable (InstName, InstPrise, FrontPhotoInst, BackPhotoInst, InstBrand, InstType, InstDesc) VALUES (?, ?, ?, ?, ?, ?, ?)';
+            params = [FilmName, FilmPrise, FrontPhoto, BackPhoto, FilmBrand, FilmType, FilmDesc];
+            break;
+        default:
+            return res.status(400).json({ success: false, message: 'Невідомий тип товару' });
+    }
+
+    db.query(query, params, (err, result) => {
+        if (err) {
+            console.error('Database error:', err);
+            return res.status(500).json({ success: false, message: 'Database error' });
+        }
+        res.redirect('/admin_page'); // Перенаправлення на адмін сторінку після успішного додавання
+    });
+});
+
+
 //Завантаження БД
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
